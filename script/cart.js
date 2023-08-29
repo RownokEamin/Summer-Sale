@@ -7,7 +7,7 @@ function updateCart() {
     cartItemsList.innerHTML = "";
     cartItems.forEach(item => {
         const li = document.createElement("li");
-        li.textContent = `${item.name} - $${item.price}`;
+        li.textContent = `${item.name} - TK ${item.price}`;
         cartItemsList.appendChild(li);
     });
     document.getElementById("cart-total").textContent = total;
