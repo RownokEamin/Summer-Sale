@@ -34,7 +34,7 @@ function checkout() {
         alert("Your cart is empty. Add some items to your cart.");
         return;
     }
-    
+     
     if (!couponApplied) {
         alert("Please apply a valid coupon code before checking out.");
         return;
