@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <div class="flex justify-center mt-12">
+
+            <div class="text-center mt-56 ">
+                <p class="text-4xl">---SALE FEVER---</p>
+                <h1 class="text-6xl my-10 mb-16">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20%
+                        off</span></h1>
+                <p class="text-2xl">Use Promo Code<button
+                        class="btn btn-secondary text-white mx-5 w-40 h-14">SELL200</button></p>
+            </div>
+            <div>
+                <img src="images/Summer 1.png" alt="">
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+        <section>
+            <h1 class=" mt-24 m-12 text-4xl  font-bold  ">Sportswear</h1>
+            <!-- container -->
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mt-24 m-12 text-center  ">
+
+                <div class="product w-96 my-5">
+                    <img class="px-28 " src="images/prod4.png" alt="">
+                    <div class="rating my-5 ">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h2 class=" font-bold text-xl">Sports Back Cap</h2>
+                    <p class="font-bold text-xl">Price: $200</p>
+                    <button class="add-to-cart font-bold text-xl" onclick="addToCart('Sports Back Cap', 200)">Add to Cart</button>
+                </div>
+                <div class="product w-96 my-5">
+                    <img class="px-32 " src="images/prod5.png" alt="">
+                    <div class="rating my-4">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h2 class="font-bold text-xl">Full Jersey Set</h2>
+                    <p class="font-bold text-xl">Price: $100</p>
+                    <button class="add-to-cart font-bold text-xl" onclick="addToCart('Full Jersey Set', 100)">Add to Cart</button>
+                </div>
+                <div class="product w-96 my-5">
+                    <img class=" px-28" src="images/prod6.png" alt="">
+                    <div class="rating my-4">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h2  class="font-bold text-xl">Sports cates</h2>
+                    <p class="font-bold text-xl">Price: $50</p>
+                    <button class="add-to-cart font-bold text-xl " onclick="addToCart('Sports cates', 50)">Add to Cart</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="text-right m-12  ">
+            <div id="cart" class="cart">
+
+                <h2 class="text-2xl font-bold">Shopping Cart</h2>
+                <br>
+                <ul id="cart-items"></ul>
+                <input id="coupon-input" type="text" placeholder="Enter coupon code">
+                <br>
+                <br>
+                <p>Total: $<span id="cart-total">0</span></p>
+                <br>
+                <button id="apply-coupon" class="btn btn-active btn-secondary" onclick="applyCoupon()"><span class="text-white">Apply</span></button>
+                <br>
+                <br>
+                <button id="checkout-btn"  class="btn btn-active btn-secondary" onclick="checkout()"><span class="text-white" >Make Purchase</span></button>
+            </div>
+        </section>
+
+
+
+        <section class="mt-10">
+            <h1 class="m-10 text-4xl font-bold mt-5 mb-5">Furniture</h1>
+            <!-- container -->
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mt-24  text-center ">
+
+                <div class="product w-96 my-5">
+                    <img class=" px-28" src="images/prod7.png" alt="">
+                    <div class="rating my-4">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h2  class="font-bold text-xl">Single Relax Chair</h2>
+                    <p class="font-bold text-xl">Price: $200</p>
+                    <button class="add-to-cart font-bold text-xl" onclick="addToCart('Single Relax Chair', 200)">Add to Cart</button>
+                </div>
+                <div class="product  w-96 my-5">
+                    <img class="px-28" src="images/prod8.png" alt="">
+                    <div class="rating my-4">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h2 class="font-bold text-xl">Children play</h2>
+                    <p class="font-bold text-xl">Price: $100</p>
+                    <button class="add-to-cart font-bold text-xl" onclick="addToCart('Children', 100)">Add to Cart</button>
+                </div>
+                <div class="product  w-96 my-5">
+                    <img class="px-28" src="images/prod9.png" alt="">
+                    <div class="rating my-4">
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    </div>
+                    <h2 class="font-bold text-xl">Flexible Sofa</h2>
+                    <p class="font-bold text-xl">Price: $50</p>
+                    <button class="add-to-cart font-bold text-xl" onclick="addToCart('Sofa', 50)">Add to Cart</button>
+                </div>
+
+        </section>
+
+
+
+
+    </main>
+
+    <script src="script/cart.js"></script>
+</body>
+
+</html>
